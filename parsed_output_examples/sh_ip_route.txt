@@ -1,0 +1,71 @@
+{
+    "vrf": {
+        "default": {
+            "address_family": {
+                "ipv4": {
+                    "routes": {
+                        "10.50.0.0/24": {
+                            "route": "10.50.0.0/24",
+                            "active": True,
+                            "source_protocol_codes": "C",
+                            "source_protocol": "connected",
+                            "next_hop": {
+                                "outgoing_interface": {
+                                    "Loopback1": {"outgoing_interface": "Loopback1"}
+                                }
+                            },
+                        },
+                        "10.50.0.1/32": {
+                            "route": "10.50.0.1/32",
+                            "active": True,
+                            "source_protocol_codes": "L",
+                            "source_protocol": "local",
+                            "next_hop": {
+                                "outgoing_interface": {
+                                    "Loopback1": {"outgoing_interface": "Loopback1"}
+                                }
+                            },
+                        },
+                        "10.254.1.1/32": {
+                            "route": "10.254.1.1/32",
+                            "active": True,
+                            "source_protocol_codes": "C",
+                            "source_protocol": "connected",
+                            "next_hop": {
+                                "outgoing_interface": {
+                                    "Loopback0": {"outgoing_interface": "Loopback0"}
+                                }
+                            },
+                        },
+                        "192.168.7.0/24": {
+                            "route": "192.168.7.0/24",
+                            "active": True,
+                            "source_protocol_codes": "C",
+                            "source_protocol": "connected",
+                            "next_hop": {
+                                "outgoing_interface": {
+                                    "GigabitEthernet1": {
+                                        "outgoing_interface": "GigabitEthernet1"
+                                    }
+                                }
+                            },
+                        },
+                        "192.168.7.96/32": {
+                            "route": "192.168.7.96/32",
+                            "active": True,
+                            "source_protocol_codes": "L",
+                            "source_protocol": "local",
+                            "next_hop": {
+                                "outgoing_interface": {
+                                    "GigabitEthernet1": {
+                                        "outgoing_interface": "GigabitEthernet1"
+                                    }
+                                }
+                            },
+                        },
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+testbed:
+  # Default credentials for all devices in testbed
+  credentials:
+    default:
+      username: "%ENV{CML_SSH_USER}"
+      password: "%ENV{CML_SSH_PASS}"
+
+# Devices in testbed
+devices:
+  cat8k-rt1:
+    type: router
+    os: iosxe
+    platform: c8kv
+    alias: rt1
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.7.96
+        settings:
+          # Unicon connection settings
+          GRACEFUL_DISCONNECT_WAIT_SEC: 0
+          POST_DISCONNECT_WAIT_SEC: 0
+          CONNECTION_TIMEOUT: 10
+        # ssh_options: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
+  cat8k-rt2:
+    type: router
+    os: iosxe
+    platform: c8kv
+    alias: rt2
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.7.97
+        settings:
+          # Unicon connection settings
+          GRACEFUL_DISCONNECT_WAIT_SEC: 0
+          POST_DISCONNECT_WAIT_SEC: 0
+          CONNECTION_TIMEOUT: 10
+        # ssh_options: "-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
