@@ -19,18 +19,18 @@ With the virtual environment activated, install all the dependencies from requir
 pip install -r requirements.txt
 ```
 
-Lastly, you will need to create a `.env` file in the project root directory with two environment variables for the device login credentials (username and password). For testing purposes, I used the variable names `EVE_USER` and `EVE_PASS` since I used EVE-NG to virtually simulate my test network.
+Lastly, you will need to create a `.env` file in the project root directory with two environment variables for the device login credentials (username and password). For testing purposes, I used the variable names `CML_SSH_USER` and `CML_SSH_PASS` since I used CML to virtually simulate my test network.
 
 ```
 CML_SSH_USER=<your username>
 CML_SSH_PASS=<your password>
 ```
 
-If you would like to use different variable names, please make sure to update the appropriate script files. More specifically, the Scrapli inventory file (`scrapli_inv.py`) and the Genie parser file (`genie_parse.py`). You'll need to make sure the scripts look for the new environment variable names.
+If you would like to use different variable names, please make sure to update the appropriate script files. More specifically, the pyATS testbed YAML file (`cml_testbed.yaml`). You'll need to make sure the testbed looks for the new environment variable names.
 
 ## Contribution
 
-As most of this repository contains introductory demo code, there are definitely ways to improve the code (i.e. error handling, improving modularity, etc.). Please feel free to make a pull request with whatever changes you find would help improve the content!
+As most of this repository contains introductory demo code, there are definitely ways to improve the code (i.e. error handling, improving modularity, etc.). Please feel free to make a pull request with whatever changes you think would help improve the code!
 
 ## Feedback
 
