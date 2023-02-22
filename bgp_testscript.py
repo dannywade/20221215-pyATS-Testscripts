@@ -25,7 +25,7 @@ class BGPTestcase(aetest.Testcase):
         """Check number of established BGP neighbors on each device"""
         # Parse BGP neighbor command on each device
         r1_bgp_neighs = testbed.devices["cat8k-rt1"].parse("show bgp neighbors")
-        r2_bgp_neighs = testbed.devices["cat8k-rt1"].parse("show bgp neighbors")
+        r2_bgp_neighs = testbed.devices["cat8k-rt2"].parse("show bgp neighbors")
 
         # Capture 'established' neighbors from each device / Set class variables for future comparison
         self.r1_pre_estab_neighbors = Dq(r1_bgp_neighs).contains("Established").get_values("neighbor")
@@ -103,7 +103,7 @@ class BGPTestcase(aetest.Testcase):
         """Check number of established BGP neighbors on each device"""
         # Parse BGP neighbor command on each device
         r1_bgp_neighs = testbed.devices["cat8k-rt1"].parse("show bgp neighbors")
-        r2_bgp_neighs = testbed.devices["cat8k-rt1"].parse("show bgp neighbors")
+        r2_bgp_neighs = testbed.devices["cat8k-rt2"].parse("show bgp neighbors")
 
         # Capture 'established' neighbors from each device
         r1_post_estab_neighbors = Dq(r1_bgp_neighs).contains("Established").get_values("neighbor")
